@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Chicki Mochi</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="game-wrapper">
+    <div id="game-container">
+      <!-- Kitchen Background Layer -->
+      <img id="kitchen-bg" src="assets/kitchen_bg.png" alt="Traditional Japanese Kitchen" />
+
+      <!-- Ambient Lantern Glows -->
+      <img class="lantern-glow lantern-left" src="assets/lantern_glow.png" alt="" />
+      <img class="lantern-glow lantern-right" src="assets/lantern_glow.png" alt="" />
+
+      <!-- Rising Steam from Broth Bowl -->
+      <div id="steam-container">
+        <img class="steam-puff s1" src="assets/steam.png" alt="" />
+        <img class="steam-puff s2" src="assets/steam.png" alt="" />
+        <img class="steam-puff s3" src="assets/steam.png" alt="" />
+      </div>
+
+      <!-- Interactive Gameplay Canvas -->
+      <canvas id="game-canvas"></canvas>
+
+      <!-- Gameplay HUD: Score ONLY at Top Center -->
+      <div id="hud" class="hidden">
+        <div id="score-display">0</div>
+      </div>
+
+      <!-- Start Screen Overlay -->
+      <div id="start-screen" class="overlay">
+        <img id="game-logo" src="assets/logo.png" alt="Katana Kitchen Logo" />
+
+        <div class="start-controls">
+          <a
+            id="fb-follow-btn"
+            href="https://www.facebook.com/p/Chicki-Mochi-61595879536699/"
+            target="_blank"
+            rel="noopener noreferrer"
+            role="button"
+          >
+            <span class="fb-icon">f</span>
+            <span id="fb-btn-text">Follow Us!</span>
+          </a>
+
+          <p id="fb-requirement-hint">Follow us on Facebook to START!</p>
+
+          <button id="start-btn" class="locked" disabled aria-label="Start Game">
+            <img src="assets/start_btn.png" alt="START" />
+          </button>
+        </div>
+      </div>
+
+      <!-- Game Over Overlay -->
+      <div id="gameover-screen" class="overlay hidden">
+        <div id="gameover-card">
+          <img id="gameover-panel-bg" src="assets/gameover_panel.png" alt="" />
+          <div class="gameover-content">
+            <h1 class="gameover-title"></h1>
+            <p id="gameover-reason"></p>
+            <div class="final-score-box">
+              <span class="final-score-label"></span>
+              <span id="final-score">0</span>
+            </div>
+            <button id="try-again-btn" aria-label="Try Again">
+              <img src="assets/try_again_btn.png" alt="TRY AGAIN" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
